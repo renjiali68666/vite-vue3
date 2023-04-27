@@ -1,0 +1,20 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["types/env.d.ts", "src/**/*", "src/**/*.vue", "src/**/*.tsx"],
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "module": "ESNext",
+    "types": ["@types/node", "vite/client"],
+    "typeRoots": ["./node_modules/@types/", "./types/"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
